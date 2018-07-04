@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.r.player.MainActivity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
+        android:text="|◀"
+        android:onClick="previous"
+        android:background="#00000000"
+        android:textSize="20dp"
+        android:layout_marginLeft="84dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="62dp"
+        android:layout_height="47dp"
+        android:background="#00000000"
+        android:text="▶|"
+        android:onClick="next"
+        android:textSize="20dp"
+        android:layout_marginRight="81dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="55dp"
+        android:layout_height="47dp"
+        android:background="#00000000"
+        android:textSize="25dp"
+        android:text="▶"
+        android:onClick="pp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/button1"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.47" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="335dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button3" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginRight="43dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/artist" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        android:layout_marginLeft="43dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/ablum" />
+
+    <TextView
+        android:id="@+id/sumtime"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintHorizontal_bias="0.907" />
+
+    <TextView
+        android:id="@+id/current"
+        android:layout_width="40sp"
+        android:layout_height="20sp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginLeft="38dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="100dp" />
+
+    <Button
+        android:id="@+id/configuration"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/config"
+        android:onClick="configuration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="3dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/menu"
+        android:layout_marginLeft="16dp"
+        android:onClick="menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="23dp" />
+
+    <ImageView
+        android:id="@+id/ablum"
+        android:layout_width="397dp"
+        android:layout_height="334dp"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        android:layout_marginLeft="7dp" />
+
+</android.support.constraint.ConstraintLayout>
